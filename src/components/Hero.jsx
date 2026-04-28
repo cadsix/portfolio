@@ -36,7 +36,7 @@ const Hero = () => {
         <SocialLinks />
         <TechStack />
         
-        <a href="/cv/Collins_Agbo_CV.pdf" download="Collins_Agbo_CV.pdf" className="download-cv-btn">
+        <a href="/cv/updatedcv.pdf" download="Collins_Agbo_CV.pdf" className="download-cv-btn">
           <HiDownload size={18} />
           Download CV
         </a>

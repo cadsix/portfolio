@@ -61,6 +61,16 @@
   color: #f24e1e; 
 }
 
+.tech-icon.nextjs {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.tech-icon.tailwind {
+  background-color: #f0fdff;
+  color: #06b6d4;
+}
+
 /* Dark mode adjustments for tech icons */
 .dark-mode .tech-icon.html { 
   background-color: rgba(255, 245, 245, 0.2); 
@@ -76,6 +86,15 @@
 
 .dark-mode .tech-icon.figma { 
   background-color: rgba(253, 244, 255, 0.2); 
+}
+
+.dark-mode .tech-icon.nextjs {
+  background-color: rgba(245, 245, 245, 0.15);
+  color: #ffffff;
+}
+
+.dark-mode .tech-icon.tailwind {
+  background-color: rgba(240, 253, 255, 0.15);
 }
 
 /* Responsive Design */
