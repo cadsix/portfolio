@@ -8,6 +8,7 @@
   margin: 0 auto;
   gap: var(--spacing-3xl);
   min-height: 85vh;
+  padding-top: calc(var(--spacing-3xl) + 80px); /* Account for fixed header */
 }
 
 .hero-content {
@@ -16,7 +17,7 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--spacing-md);
@@ -24,7 +25,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--text-secondary);
   margin-bottom: var(--spacing-lg);
   line-height: 1.7;
@@ -40,7 +41,7 @@
   gap: var(--spacing-xs);
   color: var(--text-secondary);
   margin-bottom: var(--spacing-lg);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
 }
 
 .location-pin {
@@ -178,23 +179,15 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .hero {
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: calc(var(--spacing-2xl) + 80px) var(--spacing-lg) var(--spacing-2xl);
     gap: var(--spacing-2xl);
-  }
-  
-  .hero-title {
-    font-size: 3.2rem;
   }
 }
 
 @media (max-width: 1024px) {
   .hero {
-    padding: var(--spacing-2xl) var(--spacing-md);
+    padding: calc(var(--spacing-2xl) + 70px) var(--spacing-md) var(--spacing-2xl);
     gap: var(--spacing-xl);
-  }
-  
-  .hero-title {
-    font-size: 3rem;
   }
   
   .profile-image {
@@ -207,18 +200,13 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: calc(var(--spacing-xl) + 70px) var(--spacing-md) var(--spacing-xl);
     gap: var(--spacing-lg);
-    min-height: 70vh;
+    min-height: auto;
   }
   
-  .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
+  .hero-content {
+    max-width: 100%;
   }
   
   .desktop-br {
@@ -233,11 +221,12 @@
   .mobile-image {
     display: block;
     margin: var(--spacing-md) 0;
+    order: -1; /* Show image first on mobile */
   }
   
   .profile-image {
-    width: 250px;
-    height: 250px;
+    width: min(250px, 70vw);
+    height: min(250px, 70vw);
   }
   
   .hero-image .floating-dot {
@@ -247,26 +236,13 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: var(--spacing-lg) var(--spacing-sm);
+    padding: calc(var(--spacing-lg) + 60px) var(--spacing-sm) var(--spacing-lg);
     gap: var(--spacing-md);
   }
   
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .hero-location {
-    font-size: 0.95rem;
-  }
-  
   .profile-image {
-    width: 220px;
-    height: 220px;
+    width: min(200px, 60vw);
+    height: min(200px, 60vw);
   }
   
   .mobile-image {
@@ -277,6 +253,7 @@
     padding: 12px 24px;
     font-size: 0.95rem;
     width: 100%;
+    max-width: 280px;
     justify-content: center;
   }
 }
