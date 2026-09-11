@@ -10,8 +10,8 @@ const About = () => {
       <div className="about-container">
         <div ref={imageRef} className="about-image reveal-left">
           <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
-            alt="Workspace setup"
+            src="/images/about/workspace.jpg"
+            alt="Product design and frontend engineering workspace"
             className="workspace-image"
           />
         </div>
@@ -19,18 +19,13 @@ const About = () => {
         <div ref={contentRef} className="about-content reveal-right">
           <h2 className="about-title">
             <span className="about-label">ABOUT ME</span>
-            A Software Engineer<br />
-            based in Accra, Ghana
+            Building software that solves real problems.
           </h2>
 
           <p className="about-description">
-            I'm a Software Engineer with hands-on experience building responsive, 
-            performant web applications using modern technologies including React, 
-            Next.js, JavaScript, and Supabase. I care about writing clean, 
-            maintainable code and delivering interfaces that work well and look sharp 
-            on every device. I enjoy solving real problems through thoughtful 
-            engineering and always aim to build things that are both functional and 
-            well-crafted.
+            I'm a software developer based in Accra, Ghana, building web applications with React, Next.js, and JavaScript.
+            I've worked on healthcare platforms that automate patient care workflows across Africa, as well as e-commerce apps with localized payment integrations.
+            I focus on writing clean, reliable code and delivering fast, accessible web experiences.
           </p>
         </div>
       </div>

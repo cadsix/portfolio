@@ -17,10 +17,10 @@ import HeroAnimation from './HeroAnimation'
 import { trackEvent } from '../../../utils/helpers'
 import styles        from './Hero.module.css'
 
-// Original typewriter text — unchanged from the source
+// Hero typewriter intro text
 const INTRO_TEXT =
-  "Hi, I'm Collins Agbo — a Software Engineer based in Accra, Ghana, " +
-  'focused on building clean, responsive web applications.'
+  "Hi, I'm Collins Agbo — a Software Developer based in Accra, Ghana. " +
+  'I build responsive web applications, reliable digital products, and clean user interfaces.'
 
 const Hero = () => (
   <Section className={styles.section}>
@@ -29,15 +29,14 @@ const Hero = () => (
       {/* ── Text content ── */}
       <div className={styles.content}>
 
-        {/* Original title — plain, no gradient, no eyebrow badge */}
         <h1 className={styles.title}>
-          Software Engineer
+          Software Developer
         </h1>
 
         {/* Mobile image — shown between title and subtitle on small screens */}
         <div className={`${styles.imageWrapper} ${styles.mobileImage}`}>
           <img
-            src="/images/me.png"
+            src="/images/me/me.png"
             alt="Collins Agbo"
             className={styles.profileImage}
             width={200}

@@ -4,7 +4,7 @@ import TechStack from './TechStack'
 import SocialLinks from './SocialLinks'
 import '../styles/Hero.css'
 
-const TYPEWRITER_TEXT = "Hi, I'm Collins Agbo — a Software Engineer based in Accra, Ghana, focused on building clean, responsive web applications."
+const TYPEWRITER_TEXT = "Hi, I'm Collins Agbo — a Software Developer based in Accra, Ghana. I build responsive web applications, reliable digital products, and clean user interfaces."
 
 const Hero = () => {
   const [displayed, setDisplayed] = useState('')
@@ -13,19 +13,20 @@ const Hero = () => {
   useEffect(() => {
     if (index < TYPEWRITER_TEXT.length) {
       const timeout = setTimeout(() => {
-        setDisplayed(prev => prev + TYPEWRITER_TEXT[index])
-        setIndex(prev => prev + 1)
-      }, 38)
+        setDisplayed((prev) => prev + TYPEWRITER_TEXT[index])
+        setIndex((prev) => prev + 1)
+      }, 40)
       return () => clearTimeout(timeout)
     }
   }, [index])
 
   return (
-    <main className="hero">
-      <div className="hero-content">
-        <h1 className="hero-title">
-          Software Engineer
-        </h1>
+    <section id="hero" className="hero">
+      <div className="hero-container">
+        <div className="hero-content">
+          <h1 className="hero-title">
+            Software Developer
+          </h1>
 
         {/* Mobile image - shows between title and subtitle */}
         <div className="hero-image mobile-image">

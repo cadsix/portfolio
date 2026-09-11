@@ -2,7 +2,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-10);
 }
 
 .title {
@@ -11,7 +11,46 @@
   letter-spacing: -0.02em;
 }
 
-/* ── Filter bar — neutral, only active tag gets the accent ── */
+/* ── Tab toggle ── */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: var(--space-10);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.tab {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition:
+    color var(--transition-base),
+    background var(--transition-base);
+}
+
+.tab:hover {
+  color: var(--color-text-primary);
+}
+
+.tabActive {
+  color: var(--color-text-primary) !important;
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Filter bar — sits below tabs on Personal tab ── */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -41,14 +80,13 @@
   background: var(--color-bg-secondary);
 }
 
-/* Active — the one place accent colour is used in filters */
 .filterActive {
   color: #fff !important;
   background: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
 }
 
-/* ── Cards list ── */
+/* ── Personal: alternating cards list ── */
 .list {
   display: flex;
   flex-direction: column;
@@ -106,7 +144,7 @@
   line-height: 1.75;
 }
 
-/* ── Tags — neutral, no blue background ── */
+/* ── Tags ── */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -114,8 +152,9 @@
 }
 
 .tag {
+  font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-text-secondary);
   background: var(--color-bg-secondary);
   padding: 3px 10px;
@@ -123,7 +162,7 @@
   border: 1px solid var(--color-border-strong);
 }
 
-/* ── Links — neutral ghost style ── */
+/* ── Links ── */
 .links {
   display: flex;
   gap: var(--space-3);
@@ -152,7 +191,6 @@
   transform: translateY(-2px);
 }
 
-/* Live Demo — the only blue button here */
 .linkPrimary {
   background: var(--color-primary);
   color: #fff !important;
@@ -172,6 +210,108 @@
   padding: var(--space-12) 0;
 }
 
+/* ── Client Work: 2-column card grid ── */
+.clientGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.clientCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.clientCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.clientImageWrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.clientImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clientCard:hover .clientImage { transform: scale(1.04); }
+
+.clientInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  flex: 1;
+}
+
+.clientMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.clientIndustry {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* subtle separator dot between industry and client name */
+.clientIndustry::after {
+  content: '·';
+  margin-left: var(--space-2);
+  color: var(--color-border-strong);
+}
+
+.clientName {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.clientTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.clientDescription {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.confidential {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-top: auto;
+}
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .card {
@@ -183,6 +323,10 @@
   .cardReverse .infoCol { order: unset; }
 
   .imageCol { height: 220px; }
+
+  .clientGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -190,4 +334,5 @@
   .imageCol { height: 190px; }
   .links { flex-wrap: wrap; }
   .link, .linkPrimary { flex: 1; justify-content: center; }
+  .clientImageWrap { height: 180px; }
 }
