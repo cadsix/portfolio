@@ -17,7 +17,7 @@ const Contact = () => (
     <ScrollReveal>
       <div className="text-center mb-12">
         <span className="label">Contact</span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mt-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 mt-2">
           Have a project in mind? Let&apos;s talk.
         </h2>
       </div>

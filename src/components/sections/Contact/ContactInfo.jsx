@@ -39,7 +39,7 @@ const ContactInfo = () => (
         </div>
 
         <div className="flex flex-col">
-          <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-neutral-500 dark:text-neutral-400">
+          <span className="text-[11px] font-mono font-semibold tracking-widest uppercase text-neutral-500 dark:text-neutral-400">
             {heading}
           </span>
           {href ? (

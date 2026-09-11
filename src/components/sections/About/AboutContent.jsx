@@ -11,7 +11,7 @@ const AboutContent = () => (
 
     <div>
       <span className="label">About Me</span>
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight mt-2">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight mt-2">
         Building software that solves real problems.
       </h2>
     </div>

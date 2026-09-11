@@ -30,7 +30,7 @@ const Projects = () => {
       <ScrollReveal>
         <div className="text-center mb-10">
           <span className="label">Projects</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 mt-2">
             Featured work &amp; client projects.
           </h2>
         </div>

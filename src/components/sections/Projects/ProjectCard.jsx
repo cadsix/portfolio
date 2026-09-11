@@ -32,7 +32,7 @@ const ProjectCard = ({ name, description, image, alt, tags, repoUrl, liveUrl, re
 
     {/* ── Info ── */}
     <div className={`flex flex-col gap-4 ${reverse ? 'md:order-1' : 'md:order-2'}`}>
-      <h3 className="text-xs font-mono font-bold tracking-widest uppercase text-neutral-900 dark:text-neutral-100">
+      <h3 className="text-xs font-mono font-semibold tracking-widest uppercase text-neutral-900 dark:text-neutral-100">
         {name}
       </h3>
 

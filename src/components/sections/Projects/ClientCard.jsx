@@ -89,7 +89,7 @@ const ClientCard = ({
 
           {/* Title */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight leading-snug">
+            <h3 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100 tracking-tight leading-snug">
               {title}
             </h3>
             <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">Client: {client}</span>

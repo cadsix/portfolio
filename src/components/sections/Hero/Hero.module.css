@@ -24,7 +24,7 @@
 /* ── Title — original style, no gradient ── */
 .title {
   font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text-primary);
   margin-bottom: var(--space-6);
   line-height: 1.15;

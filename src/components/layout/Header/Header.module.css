@@ -36,7 +36,7 @@
 /* ── Logo — neutral, no blue on hover ── */
 .logo {
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--color-text-primary);
   letter-spacing: -0.02em;
   background: none;
