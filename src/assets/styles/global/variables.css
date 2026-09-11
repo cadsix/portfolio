@@ -7,6 +7,10 @@
    ============================================================================= */
 
 :root {
+  /* ── Typography tokens ── */
+  --font-sans: 'Geist', 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
   /* ── Accent (10%) — use sparingly: CTA button, focus rings, active states ── */
   --color-primary:        #1a6ef5;
   --color-primary-hover:  #1559cc;
