@@ -93,21 +93,31 @@
   transition: background var(--transition-slow);
 }
 
-/* The circle itself */
-.profileImage {
+/* Circular clipping mask to allow internal image zoom */
+.imageMask {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
+  overflow: hidden;
   position: relative;
   z-index: 1;
+}
+
+/* The photo itself — zoomed in and framed on upper body */
+.profileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 12%;
   display: block;
+  transform: scale(1.35);
+  transform-origin: center 20%;
   transition: transform var(--transition-slow);
 }
 
 .imageWrapper:hover .profileImage {
-  transform: scale(1.03);
+  transform: scale(1.42);
 }
 
 /* Floating dots — original colours */
@@ -149,7 +159,8 @@
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .inner { gap: var(--space-10); }
-  .profileImage { width: 340px; height: 340px; }
+  .imageMask { width: 340px; height: 340px; }
+  .profileImage { width: 100%; height: 100%; }
 }
 
 @media (max-width: 768px) {
@@ -176,12 +187,19 @@
   .mobileImage::before,
   .mobileImage::after { display: none; }
 
-  .profileImage {
+  .imageMask {
     width: 180px;
     height: 180px;
+  }
+
+  .profileImage {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 12%;
+    transform: scale(1.35);
+    transform-origin: center 20%;
   }
 
   .orb { display: none; }
@@ -195,9 +213,14 @@
 
   .title { font-size: clamp(1.8rem, 9vw, 2.4rem); }
 
-  .profileImage {
+  .imageMask {
     width: 150px;
     height: 150px;
+  }
+
+  .profileImage {
+    width: 100%;
+    height: 100%;
   }
 
   .cta a, .cta button {

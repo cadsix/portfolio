@@ -31,7 +31,7 @@ const Projects = () => {
         <div className="text-center mb-10">
           <span className="label">Projects</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 mt-2">
-            Featured work &amp; client projects.
+            Client platforms &amp; personal projects.
           </h2>
         </div>
       </ScrollReveal>
@@ -39,7 +39,7 @@ const Projects = () => {
       {/* ── Tab toggle ── */}
       <ScrollReveal>
         <div
-          className="flex justify-center p-1.5 mb-12 bg-neutral-200/80 dark:bg-[#202020] border border-black/5 dark:border-white/10 rounded-full w-fit mx-auto shadow-inner"
+          className="flex justify-center p-1 sm:p-1.5 mb-10 md:mb-12 bg-neutral-200/80 dark:bg-[#202020] border border-black/5 dark:border-white/10 rounded-full w-fit max-w-full mx-auto shadow-inner"
           role="tablist"
           aria-label="Portfolio type"
         >
@@ -50,7 +50,7 @@ const Projects = () => {
                 key={tab}
                 role="tab"
                 aria-selected={isActive}
-                className={`text-sm font-semibold px-6 py-2 rounded-full transition-all duration-200 ${
+                className={`text-xs sm:text-sm font-semibold px-4 sm:px-6 py-2 rounded-full transition-all duration-200 ${
                   isActive
                     ? 'bg-white dark:bg-[#111111] text-neutral-950 dark:text-white shadow-md'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200'

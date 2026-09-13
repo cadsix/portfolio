@@ -48,8 +48,8 @@ const ContactForm = () => {
           name="name"
           value={values.name}
           onChange={handleChange}
-          placeholder="Collins Agbo"
-          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111111] text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:ring-2 transition-all ${
+          placeholder="Kwame Mensah"
+          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111111] text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 text-base focus:outline-none focus:ring-2 transition-all ${
             errors.name
               ? 'border-red-500 focus:ring-red-500'
               : 'border-black/10 dark:border-white/10 focus:ring-[#1a6ef5] dark:focus:ring-[#4a8ff7]'
@@ -71,7 +71,7 @@ const ContactForm = () => {
           value={values.email}
           onChange={handleChange}
           placeholder="hello@example.com"
-          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111111] text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:ring-2 transition-all ${
+          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111111] text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 text-base focus:outline-none focus:ring-2 transition-all ${
             errors.email
               ? 'border-red-500 focus:ring-red-500'
               : 'border-black/10 dark:border-white/10 focus:ring-[#1a6ef5] dark:focus:ring-[#4a8ff7]'
@@ -93,7 +93,7 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="I'd love to discuss a project with you…"
           rows={5}
-          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111111] text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:ring-2 resize-y transition-all ${
+          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#111111] text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 text-base focus:outline-none focus:ring-2 resize-y transition-all ${
             errors.message
               ? 'border-red-500 focus:ring-red-500'
               : 'border-black/10 dark:border-white/10 focus:ring-[#1a6ef5] dark:focus:ring-[#4a8ff7]'
@@ -117,12 +117,12 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#4a8ff7] dark:hover:bg-[#6aaafb] text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#1a6ef5] dark:hover:bg-[#1559cc] !text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={isSubmitting}
         onClick={() => setStatus(null)}
       >
-        <HiPaperAirplane size={18} aria-hidden="true" />
-        <span>{isSubmitting ? 'Sending…' : 'Send Message'}</span>
+        <HiPaperAirplane size={18} aria-hidden="true" className="!text-white" />
+        <span className="!text-white">{isSubmitting ? 'Sending…' : 'Send Message'}</span>
       </button>
 
     </form>

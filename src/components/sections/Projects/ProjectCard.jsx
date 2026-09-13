@@ -54,7 +54,7 @@ const ProjectCard = ({ name, description, image, alt, tags, repoUrl, liveUrl, re
       <div className="flex flex-wrap gap-3 pt-2">
         <a
           href={repoUrl}
-          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 px-4 py-2 rounded-xl border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 px-4 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700/80 bg-white/70 dark:bg-neutral-800/80 hover:bg-neutral-100 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white transition-all duration-200 hover:-translate-y-0.5"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View ${name} source code on GitHub`}
@@ -65,13 +65,13 @@ const ProjectCard = ({ name, description, image, alt, tags, repoUrl, liveUrl, re
 
         <a
           href={liveUrl}
-          className="inline-flex items-center gap-2 text-sm font-medium text-white px-4 py-2 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#4a8ff7] dark:hover:bg-[#6aaafb] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 text-sm font-medium !text-white px-4 py-2.5 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#1a6ef5] dark:hover:bg-[#1559cc] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:!text-white"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View ${name} live demo`}
         >
-          <span>Live Demo</span>
-          <FaExternalLinkAlt size={13} aria-hidden="true" />
+          <span className="!text-white font-medium">Live Demo</span>
+          <FaExternalLinkAlt size={12} aria-hidden="true" className="!text-white" />
         </a>
       </div>
     </div>

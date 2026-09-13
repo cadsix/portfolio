@@ -9,13 +9,15 @@ import styles from './Hero.module.css'
 
 const HeroAnimation = () => (
   <div className={`${styles.imageWrapper} desktop-image`}>
-    <img
-      src="/images/me/me.png"
-      alt="Collins Agbo"
-      className={styles.profileImage}
-      width={420}
-      height={420}
-    />
+    <div className={styles.imageMask}>
+      <img
+        src="/images/me/standing.png"
+        alt="Collins Agbo"
+        className={styles.profileImage}
+        width={420}
+        height={420}
+      />
+    </div>
 
     {/* Floating accent orbs */}
     <span className={`${styles.orb} ${styles.orb1}`} aria-hidden="true" />

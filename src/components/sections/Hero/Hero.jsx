@@ -17,10 +17,9 @@ import HeroAnimation from './HeroAnimation'
 import { trackEvent } from '../../../utils/helpers'
 import styles        from './Hero.module.css'
 
-// Hero typewriter intro text
+// Hero typewriter text
 const INTRO_TEXT =
-  "Hi, I'm Collins Agbo — a Software Developer based in Accra, Ghana. " +
-  'I build responsive web applications, reliable digital products, and clean user interfaces.'
+  'Crafting fast, responsive web applications with React, Next.js, and clean UI design.'
 
 const Hero = () => (
   <Section className={styles.section}>
@@ -35,13 +34,15 @@ const Hero = () => (
 
         {/* Mobile image — shown between title and subtitle on small screens */}
         <div className={`${styles.imageWrapper} ${styles.mobileImage}`}>
-          <img
-            src="/images/me/me.png"
-            alt="Collins Agbo"
-            className={styles.profileImage}
-            width={200}
-            height={200}
-          />
+          <div className={styles.imageMask}>
+            <img
+              src="/images/me/standing.png"
+              alt="Collins Agbo"
+              className={styles.profileImage}
+              width={200}
+              height={200}
+            />
+          </div>
         </div>
 
         <p className={styles.subtitle}>

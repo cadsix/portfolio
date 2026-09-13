@@ -12,14 +12,16 @@ const AboutContent = () => (
     <div>
       <span className="label">About Me</span>
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight mt-2">
-        Building software that solves real problems.
+        Hi, I&apos;m Collins Agbo.
       </h2>
     </div>
 
     <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
-      I'm a software developer based in Accra, Ghana, building web applications with React, Next.js, and JavaScript.
-      I've worked on healthcare platforms that automate patient care workflows across Africa, as well as e-commerce apps with localized payment integrations.
-      I focus on writing clean, reliable code and delivering fast, accessible web experiences.
+      I&apos;m a software developer based in Accra, Ghana. I focus on building fast, reliable, and user-centric web applications. With a strong foundation in modern frontend architecture and clean design, I love turning complex problems into clean, efficient code.
+    </p>
+
+    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+      When I&apos;m not coding, you can usually find me exploring new web tools, diving into UI design systems, or following tech trends.
     </p>
 
   </ScrollReveal>

@@ -93,13 +93,13 @@ const ClientCard = ({
         ) : liveUrl ? (
           <a
             href={liveUrl}
-            className="inline-flex items-center gap-2 text-sm font-medium text-white px-4 py-2 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#4a8ff7] dark:hover:bg-[#6aaafb] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 text-sm font-medium !text-white px-4 py-2.5 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#1a6ef5] dark:hover:bg-[#1559cc] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:!text-white"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Visit ${title} live website`}
           >
-            <span>Visit Live Site</span>
-            <FaExternalLinkAlt size={13} aria-hidden="true" />
+            <span className="!text-white font-medium">Visit Live Site</span>
+            <FaExternalLinkAlt size={12} aria-hidden="true" className="!text-white" />
           </a>
         ) : null}
       </div>

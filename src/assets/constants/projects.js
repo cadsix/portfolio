@@ -8,9 +8,9 @@
 export const PROJECTS = [
   {
     id:          'cryptosix',
-    name:        'CryptoSix — Live Crypto Market Dashboard',
+    name:        'CryptoSix — Real-Time Crypto Spot Terminal',
     description:
-      'A real-time cryptocurrency market dashboard and portfolio tracker powered by the CoinGecko API. Features live price tickers, 7-day sparkline trend charts, instant asset search, and personal holding calculations.',
+      'A live cryptocurrency market tracker built with Next.js and TypeScript. Streams real-time spot prices, 24h market shifts, and 7-day sparklines for 50+ coins via CoinGecko, featuring an interactive in-line calculator where you can type your holdings and watch your portfolio balance calculate on the fly.',
     image:       '/images/projects/cryptosix.jpg',
     alt:         'CryptoSix live crypto market dashboard interface',
     tags:        ['Next.js', 'TypeScript', 'CoinGecko API', 'Tailwind CSS'],
@@ -20,9 +20,9 @@ export const PROJECTS = [
   },
   {
     id:          'driveease',
-    name:        'DriveEase — Car Rental & Booking',
+    name:        'DriveEase — Car Rental & Reservation Flow',
     description:
-      'A responsive car rental web app with real-time vehicle filtering, pricing estimation, dynamic availability lookup, and a multi-step booking checkout flow.',
+      'A responsive car rental web app designed to make browsing and reserving vehicles effortless. Features instant vehicle category filtering, live daily price estimations, date-range selection, and a guided multi-step checkout experience.',
     image:       '/images/projects/driveease.jpg',
     alt:         'DriveEase car rental platform interface',
     tags:        ['React', 'SCSS', 'JavaScript'],
@@ -32,9 +32,9 @@ export const PROJECTS = [
   },
   {
     id:          'triathlon',
-    name:        'Perform — Triathlon Coaching',
+    name:        'Perform — Endurance Coaching Platform',
     description:
-      'A modern triathlon coaching website built for endurance athletes, featuring structured training packages, interactive pricing tiers, and clean responsive layouts.',
+      'A sleek, editorial-style coaching landing page built for endurance athletes. Features interactive training tiers, athlete case studies, customized training roadmaps, and smooth micro-interactions that look great on any screen.',
     image:       '/images/projects/perform.jpg',
     alt:         'Perform triathlon coaching website interface',
     tags:        ['Next.js', 'CSS Modules', 'Responsive UI'],
@@ -44,9 +44,9 @@ export const PROJECTS = [
   },
   {
     id:          'ecommerce',
-    name:        'SNEAKERS — Footwear E-Commerce',
+    name:        'SNEAKERS — Streetwear Product Showcase',
     description:
-      'A responsive streetwear footwear e-commerce experience featuring an interactive product gallery with multi-angle lightbox preview, real-time quantity management, and an instant slide-out cart drawer.',
+      'A focused streetwear product page with an interactive lightbox gallery, thumbnail carousel, real-time quantity selectors, and a slide-out cart drawer with live state persistence.',
     image:       '/images/projects/sneakers.jpg',
     alt:         'SNEAKERS streetwear footwear e-commerce interface',
     tags:        ['React', 'State Management', 'CSS'],
@@ -56,9 +56,9 @@ export const PROJECTS = [
   },
   {
     id:          'food-ecommerce',
-    name:        'Tomato — Food Ordering App',
+    name:        'Tomato — Local Food Ordering Experience',
     description:
-      'A food ordering web application with categorized menu browsing, real-time cart state calculation, dish customization, and a mobile-first checkout experience.',
+      'A fast, mobile-first food delivery web app tailored for Accra foodies. Features categorized menu filtering, add-on dish customization, instant cart subtotal calculations, and a smooth checkout flow.',
     image:       '/images/projects/tomato.jpg',
     alt:         'Tomato food ordering web app interface',
     tags:        ['React', 'JavaScript', 'CSS'],
