@@ -17,10 +17,11 @@ const About = () => (
       <ScrollReveal direction="left" className="relative">
         <div className="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 shadow-2xl bg-neutral-100 dark:bg-[#161616] group">
           <img
-            src="/images/about/workspace.jpg"
+            src="/images/about/workspace.webp"
             alt="Software developer coding workspace"
             className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
+            decoding="async"
             width={600}
             height={450}
           />

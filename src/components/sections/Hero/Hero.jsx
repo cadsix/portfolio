@@ -36,11 +36,13 @@ const Hero = () => (
         <div className={`${styles.imageWrapper} ${styles.mobileImage}`}>
           <div className={styles.imageMask}>
             <img
-              src="/images/me/standing.png"
+              src="/images/me/standing.webp"
               alt="Collins Agbo"
               className={styles.profileImage}
               width={200}
               height={200}
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
         </div>

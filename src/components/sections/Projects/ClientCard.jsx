@@ -41,6 +41,9 @@ const ClientCard = ({
           alt={alt}
           className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
+          decoding="async"
+          width={600}
+          height={375}
         />
       </a>
     </div>
