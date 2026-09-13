@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Preload CV so download is instant -->
-    <link rel="preload" href="/cv/Collins_Agbo_CV.pdf" as="fetch" crossorigin="anonymous" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Collins Agbo — Software Developer based in Accra, Ghana. Building fast, responsive web applications and reliable software." />
-    <title>Collins Agbo | Software Developer</title>
-
-    <!-- Google Fonts: Geist Sans & Geist Mono -->
+    <!-- Performance: Preload Critical Hero Image & Resource Hints -->
+    <link rel="preload" href="/images/me/standing.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">

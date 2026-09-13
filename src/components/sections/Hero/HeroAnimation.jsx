@@ -11,11 +11,14 @@ const HeroAnimation = () => (
   <div className={`${styles.imageWrapper} desktop-image`}>
     <div className={styles.imageMask}>
       <img
-        src="/images/me/standing.png"
+        src="/images/me/standing.webp"
         alt="Collins Agbo"
         className={styles.profileImage}
         width={420}
         height={420}
+        decoding="async"
+        fetchPriority="high"
+        loading="eager"
       />
     </div>
 
