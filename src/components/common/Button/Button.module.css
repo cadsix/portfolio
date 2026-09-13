@@ -25,13 +25,13 @@
 /* Primary — the main accent button. Only place blue is intentional ── */
 .primary {
   background: var(--color-primary);
-  color: #fff;
+  color: #fff !important;
   border: 2px solid var(--color-primary);
 }
 .primary:hover:not(.disabled) {
   background: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
-  color: #fff;
+  color: #fff !important;
   transform: translateY(-2px);
 }
 

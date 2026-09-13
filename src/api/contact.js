@@ -15,11 +15,16 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwlkokld'
 export const sendContactEmail = async ({ name, email, message }) => {
   const response = await fetch(FORMSPREE_ENDPOINT, {
     method:  'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Accept':       'application/json',
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({ name, email, message }),
   })
 
   if (!response.ok) {
-    throw new Error('Failed to send message. Please try again.')
+    const errData = await response.json().catch(() => null)
+    const errMsg = errData?.error || 'Failed to send message. Please try again.'
+    throw new Error(errMsg)
   }
 }

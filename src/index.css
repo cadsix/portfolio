@@ -14,6 +14,10 @@
 @import './assets/styles/themes/dark.css';
 @import './assets/styles/global/typography.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*
  * ScrollReveal — revealed state
  * Applied globally because useScrollReveal adds the plain class `revealed`

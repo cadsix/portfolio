@@ -5,28 +5,29 @@
    10%: same blue accent, slightly lighter for contrast on dark
    ============================================================================= */
 
+.dark,
 .dark-mode {
-  --color-bg-primary:      #141414;
-  --color-bg-secondary:    #1c1c1c;
-  --color-bg-card:         rgba(28, 28, 28, 0.80);
-  --color-bg-card-hover:   rgba(36, 36, 36, 0.95);
-  --color-bg-glass:        rgba(20, 20, 20, 0.60);
-  --color-bg-glass-strong: rgba(20, 20, 20, 0.92);
+  --color-bg-primary:      #111111;
+  --color-bg-secondary:    #181818;
+  --color-bg-card:         rgba(24, 24, 24, 0.85);
+  --color-bg-card-hover:   rgba(32, 32, 32, 0.95);
+  --color-bg-glass:        rgba(17, 17, 17, 0.65);
+  --color-bg-glass-strong: rgba(17, 17, 17, 0.92);
 
-  --color-text-primary:   #f0f0f0;
-  --color-text-secondary: #a0a0a0;
-  --color-text-muted:     #606060;
+  --color-text-primary:   #f5f5f5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted:     #737373;
 
-  --color-border:        rgba(255, 255, 255, 0.07);
-  --color-border-strong: rgba(255, 255, 255, 0.13);
+  --color-border:        rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
 
-  --shadow-sm:   0 1px  4px  rgba(0, 0, 0, 0.30);
-  --shadow-md:   0 4px  16px rgba(0, 0, 0, 0.40);
-  --shadow-lg:   0 8px  32px rgba(0, 0, 0, 0.50);
-  --shadow-glow: 0 4px  20px rgba(0, 0, 0, 0.30);
+  --shadow-sm:   0 1px  4px  rgba(0, 0, 0, 0.35);
+  --shadow-md:   0 4px  16px rgba(0, 0, 0, 0.45);
+  --shadow-lg:   0 8px  32px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 4px  20px rgba(0, 0, 0, 0.35);
 
-  --color-primary:       #4a8ff7;
-  --color-primary-hover: #6aaafb;
-  --color-primary-glow:  rgba(74, 143, 247, 0.18);
+  --color-primary:       #1a6ef5;
+  --color-primary-hover: #1559cc;
+  --color-primary-glow:  rgba(26, 110, 245, 0.25);
   --color-accent-red:    #e06060;
 }

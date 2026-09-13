@@ -2,11 +2,9 @@
  * ContactInfo.jsx
  *
  * Left column of the Contact section: location, email, and phone tiles.
- * Isolated from the form so each concern has its own file.
  */
 
 import { HiLocationMarker, HiMail, HiPhone } from 'react-icons/hi'
-import styles from './Contact.module.css'
 
 const INFO_ITEMS = [
   {
@@ -30,17 +28,32 @@ const INFO_ITEMS = [
 ]
 
 const ContactInfo = () => (
-  <div className={styles.info}>
+  <div className="flex flex-col gap-4">
     {INFO_ITEMS.map(({ icon, heading, content, href }) => (
-      <div key={heading} className={styles.infoItem}>
-        <div className={styles.infoIcon} aria-hidden="true">{icon}</div>
+      <div
+        key={heading}
+        className="flex items-center gap-4 p-5 rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/70 dark:bg-[#181818]/80 backdrop-blur-md shadow-sm transition-all duration-200 hover:shadow-md hover:border-black/15 dark:hover:border-white/15 hover:-translate-y-0.5"
+      >
+        <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-[#1a6ef5] dark:text-[#4a8ff7] flex items-center justify-center flex-shrink-0 border border-blue-100 dark:border-blue-900/50" aria-hidden="true">
+          {icon}
+        </div>
 
-        <div className={styles.infoDetails}>
-          <h3>{heading}</h3>
-          {href
-            ? <a href={href}>{content}</a>
-            : <p>{content}</p>
-          }
+        <div className="flex flex-col min-w-0 flex-1">
+          <span className="text-[11px] font-mono font-semibold tracking-widest uppercase text-neutral-500 dark:text-neutral-400">
+            {heading}
+          </span>
+          {href ? (
+            <a
+              href={href}
+              className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 hover:text-[#1a6ef5] dark:hover:text-[#4a8ff7] transition-colors mt-0.5 break-words"
+            >
+              {content}
+            </a>
+          ) : (
+            <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5 break-words">
+              {content}
+            </p>
+          )}
         </div>
       </div>
     ))}

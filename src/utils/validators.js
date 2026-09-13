@@ -9,24 +9,29 @@
  * @param {{ name: string, email: string, message: string }} values
  * @returns {object} errors — empty object means the form is valid.
  */
-export const validateContactForm = ({ name, email, message }) => {
+export const validateContactForm = (values = {}) => {
+  const { name = '', email = '', message = '' } = values || {}
   const errors = {}
 
-  if (!name.trim()) {
+  const trimmedName = String(name || '').trim()
+  const trimmedEmail = String(email || '').trim()
+  const trimmedMessage = String(message || '').trim()
+
+  if (!trimmedName) {
     errors.name = 'Name is required.'
-  } else if (name.trim().length < 2) {
+  } else if (trimmedName.length < 2) {
     errors.name = 'Name must be at least 2 characters.'
   }
 
-  if (!email.trim()) {
+  if (!trimmedEmail) {
     errors.email = 'Email is required.'
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
     errors.email = 'Please enter a valid email address.'
   }
 
-  if (!message.trim()) {
+  if (!trimmedMessage) {
     errors.message = 'Message is required.'
-  } else if (message.trim().length < 10) {
+  } else if (trimmedMessage.length < 10) {
     errors.message = 'Message must be at least 10 characters.'
   }
 

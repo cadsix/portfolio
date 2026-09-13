@@ -2,30 +2,26 @@
  * AboutContent.jsx
  *
  * Text column of the About section.
- * Content is exactly as written in the original About.jsx — nothing added.
  */
 
 import ScrollReveal from '../../ui/ScrollReveal'
-import styles       from './About.module.css'
 
 const AboutContent = () => (
-  <ScrollReveal direction="right" className={styles.content}>
+  <ScrollReveal direction="right" className="flex flex-col gap-6">
 
-    <span className="label">About Me</span>
+    <div>
+      <span className="label">About Me</span>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight mt-2">
+        Hi, I&apos;m Collins Agbo.
+      </h2>
+    </div>
 
-    <h2 className={styles.title}>
-      A Software Engineer<br />
-      based in Accra, Ghana
-    </h2>
+    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+      I&apos;m a software developer based in Accra, Ghana. I focus on building fast, reliable, and user-centric web applications. With a strong foundation in modern frontend architecture and clean design, I love turning complex problems into clean, efficient code.
+    </p>
 
-    <p className={styles.description}>
-      I'm a Software Engineer with hands-on experience building responsive,
-      performant web applications using modern technologies including React,
-      Next.js, JavaScript, and Supabase. I care about writing clean,
-      maintainable code and delivering interfaces that work well and look sharp
-      on every device. I enjoy solving real problems through thoughtful
-      engineering and always aim to build things that are both functional and
-      well-crafted.
+    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+      When I&apos;m not coding, you can usually find me exploring new web tools, diving into UI design systems, or following tech trends.
     </p>
 
   </ScrollReveal>

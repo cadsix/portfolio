@@ -22,6 +22,7 @@ const STORAGE_KEY = 'theme'
 const getInitialTheme = () => localStorage.getItem(STORAGE_KEY) === 'dark'
 
 const syncThemeClass = (isDark) => {
+  document.documentElement.classList.toggle('dark', isDark)
   document.documentElement.classList.toggle('dark-mode', isDark)
   localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light')
 }

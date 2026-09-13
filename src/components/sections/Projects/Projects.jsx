@@ -1,68 +1,89 @@
 /**
  * Projects.jsx
  *
- * Displays the portfolio in the original alternating layout:
- * image left / info right, then image right / info left, and so on.
+ * Two-tab section: "Personal" shows alternating project cards,
+ * "Client Work" shows the upgraded browser-mockup showcase cards.
  *
- * Tag filtering is powered by ProjectFilters — clicking a tag shows only
- * matching projects. "All" resets the filter.
- *
- * Project data lives in assets/constants/projects.js — add or reorder
- * entries there without touching this component.
+ * Data sources:
+ *   Personal  → assets/constants/projects.js
+ *   Client    → assets/constants/clients.js
  */
 
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 
-import Section        from '../../common/Section'
-import ScrollReveal   from '../../ui/ScrollReveal'
-import ProjectCard    from './ProjectCard'
-import ProjectFilters from './ProjectFilters'
-import { PROJECTS }   from '../../../assets/constants/projects'
-import styles         from './Projects.module.css'
+import Section      from '../../common/Section'
+import ScrollReveal from '../../ui/ScrollReveal'
+import ProjectCard  from './ProjectCard'
+import ClientCard   from './ClientCard'
+import { PROJECTS } from '../../../assets/constants/projects'
+import { CLIENTS }  from '../../../assets/constants/clients'
+
+const TABS = ['Personal', 'Client Work']
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All')
-
-  /** Only re-computed when the active filter changes */
-  const visibleProjects = useMemo(
-    () =>
-      activeFilter === 'All'
-        ? PROJECTS
-        : PROJECTS.filter((p) => p.tags.includes(activeFilter)),
-    [activeFilter]
-  )
+  const [activeTab, setActiveTab] = useState('Personal')
 
   return (
     <Section id="projects" alternate>
 
       {/* ── Section header ── */}
       <ScrollReveal>
-        <div className={styles.header}>
-          <span className="label">Portfolio</span>
-          <h2 className={styles.title}>A selection of work I've built.</h2>
+        <div className="text-center mb-10">
+          <span className="label">Projects</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 mt-2">
+            Client platforms &amp; personal projects.
+          </h2>
         </div>
       </ScrollReveal>
 
-      {/* ── Filter bar ── */}
+      {/* ── Tab toggle ── */}
       <ScrollReveal>
-        <ProjectFilters active={activeFilter} onChange={setActiveFilter} />
+        <div
+          className="flex justify-center p-1 sm:p-1.5 mb-10 md:mb-12 bg-neutral-200/80 dark:bg-[#202020] border border-black/5 dark:border-white/10 rounded-full w-fit max-w-full mx-auto shadow-inner"
+          role="tablist"
+          aria-label="Portfolio type"
+        >
+          {TABS.map((tab) => {
+            const isActive = activeTab === tab
+            return (
+              <button
+                key={tab}
+                role="tab"
+                aria-selected={isActive}
+                className={`text-xs sm:text-sm font-semibold px-4 sm:px-6 py-2 rounded-full transition-all duration-200 ${
+                  isActive
+                    ? 'bg-white dark:bg-[#111111] text-neutral-950 dark:text-white shadow-md'
+                    : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200'
+                }`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </button>
+            )
+          })}
+        </div>
       </ScrollReveal>
 
-      {/* ── Alternating project cards ── */}
-      <div className={styles.list}>
-        {visibleProjects.map((project, index) => (
-          <ScrollReveal key={project.id} style={{ transitionDelay: `${index * 0.08}s` }}>
-            {/* Odd indexes flip the image to the right */}
-            <ProjectCard
-              {...project}
-              reverse={index % 2 !== 0}
-            />
-          </ScrollReveal>
-        ))}
-      </div>
+      {/* ── Personal tab ── */}
+      {activeTab === 'Personal' && (
+        <div className="flex flex-col gap-16 md:gap-20">
+          {PROJECTS.map((project, index) => (
+            <ScrollReveal key={project.id} style={{ transitionDelay: `${index * 0.08}s` }}>
+              <ProjectCard {...project} reverse={index % 2 !== 0} />
+            </ScrollReveal>
+          ))}
+        </div>
+      )}
 
-      {visibleProjects.length === 0 && (
-        <p className={styles.empty}>No projects match this filter.</p>
+      {/* ── Client Work tab ── */}
+      {activeTab === 'Client Work' && (
+        <div className="flex flex-col gap-16 md:gap-20">
+          {CLIENTS.map((client, index) => (
+            <ScrollReveal key={client.id} style={{ transitionDelay: `${index * 0.08}s` }}>
+              <ClientCard {...client} reverse={index % 2 !== 0} />
+            </ScrollReveal>
+          ))}
+        </div>
       )}
 
     </Section>

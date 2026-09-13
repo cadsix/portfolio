@@ -17,10 +17,9 @@ import HeroAnimation from './HeroAnimation'
 import { trackEvent } from '../../../utils/helpers'
 import styles        from './Hero.module.css'
 
-// Original typewriter text — unchanged from the source
+// Hero typewriter text
 const INTRO_TEXT =
-  "Hi, I'm Collins Agbo — a Software Engineer based in Accra, Ghana, " +
-  'focused on building clean, responsive web applications.'
+  'Crafting fast, responsive web applications with React, Next.js, and clean UI design.'
 
 const Hero = () => (
   <Section className={styles.section}>
@@ -29,20 +28,21 @@ const Hero = () => (
       {/* ── Text content ── */}
       <div className={styles.content}>
 
-        {/* Original title — plain, no gradient, no eyebrow badge */}
         <h1 className={styles.title}>
-          Software Engineer
+          Software Developer
         </h1>
 
         {/* Mobile image — shown between title and subtitle on small screens */}
         <div className={`${styles.imageWrapper} ${styles.mobileImage}`}>
-          <img
-            src="/images/me.png"
-            alt="Collins Agbo"
-            className={styles.profileImage}
-            width={200}
-            height={200}
-          />
+          <div className={styles.imageMask}>
+            <img
+              src="/images/me/standing.png"
+              alt="Collins Agbo"
+              className={styles.profileImage}
+              width={200}
+              height={200}
+            />
+          </div>
         </div>
 
         <p className={styles.subtitle}>
