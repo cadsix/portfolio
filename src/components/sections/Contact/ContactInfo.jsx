@@ -38,19 +38,19 @@ const ContactInfo = () => (
           {icon}
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col min-w-0 flex-1">
           <span className="text-[11px] font-mono font-semibold tracking-widest uppercase text-neutral-500 dark:text-neutral-400">
             {heading}
           </span>
           {href ? (
             <a
               href={href}
-              className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 hover:text-[#1a6ef5] dark:hover:text-[#4a8ff7] transition-colors mt-0.5"
+              className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 hover:text-[#1a6ef5] dark:hover:text-[#4a8ff7] transition-colors mt-0.5 break-words"
             >
               {content}
             </a>
           ) : (
-            <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5">
+            <p className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5 break-words">
               {content}
             </p>
           )}

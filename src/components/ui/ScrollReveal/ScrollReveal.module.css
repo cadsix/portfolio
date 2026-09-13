@@ -10,8 +10,14 @@
   transition:
     opacity  var(--transition-reveal),
     transform var(--transition-reveal);
+  will-change: opacity, transform;
 }
 
-.revealUp    { opacity: 0; transform: translateY(40px); }
-.revealLeft  { opacity: 0; transform: translateX(-50px); }
-.revealRight { opacity: 0; transform: translateX(50px); }
+.revealUp    { opacity: 0; transform: translateY(24px); }
+.revealLeft  { opacity: 0; transform: translateY(24px); }
+.revealRight { opacity: 0; transform: translateY(24px); }
+
+@media (min-width: 768px) {
+  .revealLeft  { opacity: 0; transform: translateX(-24px); }
+  .revealRight { opacity: 0; transform: translateX(24px); }
+}

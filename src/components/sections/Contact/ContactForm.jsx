@@ -20,12 +20,13 @@ const ContactForm = () => {
     useForm(INITIAL_VALUES, validateContactForm)
 
   const onSubmit = handleSubmit(async (data) => {
+    setStatus(null)
     try {
       await sendContactEmail(data)
       reset()
       setStatus('success')
     } catch (err) {
-      console.error('EmailJS error:', err)
+      console.error('Contact submit error:', err)
       setStatus('error')
     }
   })
@@ -119,7 +120,6 @@ const ContactForm = () => {
         type="submit"
         className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1a6ef5] hover:bg-[#1559cc] dark:bg-[#1a6ef5] dark:hover:bg-[#1559cc] !text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={isSubmitting}
-        onClick={() => setStatus(null)}
       >
         <HiPaperAirplane size={18} aria-hidden="true" className="!text-white" />
         <span className="!text-white">{isSubmitting ? 'Sending…' : 'Send Message'}</span>

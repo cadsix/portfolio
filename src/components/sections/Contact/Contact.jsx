@@ -25,11 +25,11 @@ const Contact = () => (
 
     {/* ── Two-column layout ── */}
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-      <ScrollReveal direction="left" className="lg:col-span-5">
+      <ScrollReveal direction="up" className="lg:col-span-5">
         <ContactInfo />
       </ScrollReveal>
 
-      <ScrollReveal direction="right" className="lg:col-span-7">
+      <ScrollReveal direction="up" className="lg:col-span-7">
         <ContactForm />
       </ScrollReveal>
     </div>
