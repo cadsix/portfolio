@@ -77,7 +77,7 @@ const Projects = () => {
 
       {/* ── Client Work tab ── */}
       {activeTab === 'Client Work' && (
-        <div className="flex flex-col gap-12 sm:gap-14">
+        <div className="flex flex-col gap-16 md:gap-20">
           {CLIENTS.map((client, index) => (
             <ScrollReveal key={client.id} style={{ transitionDelay: `${index * 0.08}s` }}>
               <ClientCard {...client} reverse={index % 2 !== 0} />
