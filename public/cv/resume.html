@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collins Agbo — Software Engineer CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.40;
+      font-size: 9pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      display: grid;
+      grid-template-columns: 70mm 140mm;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    
+    /* ── Left Sidebar (Dark) ── */
+    .sidebar {
+      background: #111418;
+      color: #e2e8f0;
+      padding: 20mm 14mm 18mm 16mm;
+      display: flex;
+      flex-direction: column;
+      gap: 15pt;
+      border-right: 1px solid #1f242d;
+    }
+    .name-block h1 {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .name-block .title {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-top: 5pt;
+      letter-spacing: -0.01em;
+    }
+
+    .side-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5pt;
+    }
+    .side-heading {
+      font-size: 7.2pt;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      border-bottom: 1px solid #28303e;
+      padding-bottom: 2.5pt;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5pt;
+      font-size: 8.2pt;
+      color: #cbd5e1;
+    }
+    .contact-list a {
+      color: #cbd5e1;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .skill-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5pt;
+      margin-bottom: 3pt;
+    }
+    .skill-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+    .skill-items {
+      font-size: 7.8pt;
+      color: #94a3b8;
+      line-height: 1.32;
+    }
+
+    .cert-item {
+      margin-bottom: 3.5pt;
+    }
+    .cert-name {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+    .cert-issuer {
+      font-size: 7.2pt;
+      color: #94a3b8;
+    }
+
+    /* ── Main Column (Light) ── */
+    .main {
+      padding: 20mm 18mm 18mm 16mm;
+      display: flex;
+      flex-direction: column;
+      gap: 12pt;
+      background: #ffffff;
+    }
+    .section-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0f172a;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 2.5pt;
+      margin-bottom: 5pt;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .summary-text {
+      font-size: 8.5pt;
+      color: #334155;
+      line-height: 1.42;
+      text-align: justify;
+    }
+
+    .exp-item {
+      margin-bottom: 7.5pt;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1pt;
+    }
+    .exp-role {
+      font-size: 9.2pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .exp-role .company {
+      color: #1a6ef5;
+      font-weight: 600;
+    }
+    .exp-meta {
+      font-size: 7.5pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748b;
+    }
+    .exp-sub {
+      font-size: 7.8pt;
+      color: #64748b;
+      margin-bottom: 2.5pt;
+      font-weight: 500;
+    }
+    .bullet-list {
+      list-style-type: square;
+      padding-left: 11pt;
+      display: flex;
+      flex-direction: column;
+      gap: 2pt;
+      font-size: 8.2pt;
+      color: #334155;
+      line-height: 1.34;
+    }
+    .bullet-list li strong {
+      color: #0f172a;
+    }
+
+    .proj-item {
+      margin-bottom: 5pt;
+    }
+    .proj-title {
+      font-size: 8.6pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .proj-title a {
+      color: #1a6ef5;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 7.8pt;
+    }
+    .proj-desc {
+      font-size: 8pt;
+      color: #475569;
+      line-height: 1.30;
+      margin-top: 1pt;
+    }
+
+    .edu-item {
+      margin-bottom: 4pt;
+    }
+    .edu-degree {
+      font-size: 8.6pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-school {
+      font-size: 8pt;
+      color: #475569;
+    }
+    .edu-date {
+      font-size: 7.5pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="name-block">
+        <h1>COLLINS<br>AGBO</h1>
+        <div class="title">Software Engineer</div>
+      </div>
+
+      <!-- Contact -->
+      <div class="side-section">
+        <div class="side-heading">Contact</div>
+        <ul class="contact-list">
+          <li>Ho, Ghana</li>
+          <li>+233 55 943 8418</li>
+          <li><a href="mailto:agbocollins15@gmail.com">agbocollins15@gmail.com</a></li>
+          <li><a href="https://github.com/cadsix" target="_blank">github.com/cadsix</a></li>
+          <li><a href="https://linkedin.com/in/collins-agbo-786720239" target="_blank">LinkedIn Profile</a></li>
+        </ul>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="side-section">
+        <div class="side-heading">Technical Skills</div>
+        
+        <div class="skill-group">
+          <div class="skill-title">Front-End</div>
+          <div class="skill-items">React, Next.js, JavaScript (ES6+), Tailwind CSS, HTML5, CSS3</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-title">Back-End &amp; Data</div>
+          <div class="skill-items">Node.js, Supabase, Firebase (Firestore, Auth), PHP, REST APIs</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-title">Design &amp; UI/UX</div>
+          <div class="skill-items">Figma Mockups, UI Systems, Responsive Layouts, Graphic Design</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-title">Tools &amp; Practices</div>
+          <div class="skill-items">Git, GitHub, VS Code, Cross-Browser Compatibility, Web Performance</div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="side-section">
+        <div class="side-heading">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-name">Responsive Web Design</div>
+          <div class="cert-issuer">freeCodeCamp</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">JavaScript Algorithms &amp; DS</div>
+          <div class="cert-issuer">freeCodeCamp</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">React Development</div>
+          <div class="cert-issuer">Scrimba</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN COLUMN -->
+    <main class="main">
+      
+      <!-- Profile Summary -->
+      <section>
+        <div class="section-title">Profile Summary</div>
+        <p class="summary-text">
+          Creative and results-driven Software Engineer with a strong foundation in modern frontend architecture and full-cycle web development. Experienced building production web applications across digital health platforms (<strong>Afya</strong>, <strong>LafyAI</strong>), government educational portals (<strong>GES-Ho</strong>), and e-commerce solutions. Skilled in React, Next.js, Tailwind CSS, Node.js, Supabase, and Firebase, with a proven ability to turn complex operational workflows into clean, high-performance, and responsive user experiences.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section>
+        <div class="section-title">Experience</div>
+
+        <!-- Node Eight / Health Platforms -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Software Engineer &mdash; <span class="company">Node Eight</span></div>
+            <div class="exp-meta">Ho, Ghana / Remote</div>
+          </div>
+          <div class="exp-sub">Community Health &amp; Digital Innovation Platforms (Afya &amp; LafyAI)</div>
+          <ul class="bullet-list">
+            <li>Collaborated on engineering health-tech web platforms including <strong>Afya (useafiyai.com)</strong> and <strong>LafyAI (lafyai.com)</strong> to support community health workers and care coordinators.</li>
+            <li>Built responsive interfaces integrated with WhatsApp workflows and automated messaging pipelines for patient screening and triage.</li>
+            <li>Translated Figma prototypes into production code, optimizing performance for mobile viewports in low-connectivity areas.</li>
+          </ul>
+        </div>
+
+        <!-- LafyAI -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Software Engineer (Contract) &mdash; <span class="company">LafyAI</span></div>
+            <div class="exp-meta">Remote</div>
+          </div>
+          <div class="exp-sub">Childhood Immunization &amp; Care Adherence (lafyai.com)</div>
+          <ul class="bullet-list">
+            <li>Architected and built the web application using <strong>Next.js</strong>, <strong>Tailwind CSS</strong>, and <strong>Supabase</strong> (Auth, PostgreSQL data layer).</li>
+            <li>Implemented clinic caregiver registration flows (&lt;60s onboarding) and automated behavioral reminder triggers to reduce vaccine drop-offs.</li>
+          </ul>
+        </div>
+
+        <!-- GES-Ho -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">React Developer &mdash; <span class="company">GES-Ho</span></div>
+            <div class="exp-meta">Ongoing &bull; Ho, Ghana</div>
+          </div>
+          <div class="exp-sub">Ghana Education Service Regional Office Portal</div>
+          <ul class="bullet-list">
+            <li>Developing a centralized React web platform with Firebase backend (Firestore, Authentication) for regional administrative workflows.</li>
+            <li>Collaborating directly with public sector stakeholders to translate reporting requirements into dynamic, intuitive dashboard interfaces.</li>
+          </ul>
+        </div>
+
+        <!-- Freelance -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Freelance Software Engineer</div>
+            <div class="exp-meta">2024 &ndash; Present</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Delivering full-cycle web applications and e-commerce solutions (such as Streetside Mart) with modern payment integrations (MTN MoMo, Telecel Cash).</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- Featured Projects -->
+      <section>
+        <div class="section-title">Featured Projects</div>
+        
+        <div class="proj-item">
+          <div class="proj-title">Afya &mdash; Community Hypertension Screening <a href="https://useafiyai.com" target="_blank">(useafiyai.com)</a></div>
+          <div class="proj-desc">WhatsApp-native health platform enabling field workers to log BP readings on-site and send automated, jargon-free health updates and follow-up queues.</div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-title">Streetside Mart &mdash; Essentials Storefront <a href="https://streetside-mart.vercel.app" target="_blank">(streetside-mart.vercel.app)</a></div>
+          <div class="proj-desc">Next.js e-commerce storefront for Ghanaian households featuring instant product search, starter bundles, and local Mobile Money checkout.</div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="exp-header">
+            <div class="edu-degree">B.Sc. Information Technology</div>
+            <div class="edu-date">2025 &ndash; 2027 (Expected)</div>
+          </div>
+          <div class="edu-school">Ho Technical University &bull; Ho, Ghana</div>
+        </div>
+        <div class="edu-item">
+          <div class="exp-header">
+            <div class="edu-degree">HND Information Technology</div>
+            <div class="edu-date">Completed 2025</div>
+          </div>
+          <div class="edu-school">Ho Technical University &bull; Ho, Ghana</div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
