@@ -45,4 +45,16 @@ export const CLIENTS = [
     liveUrl:      'https://streetside-mart.vercel.app',
     confidential: false,
   },
+  {
+    id:           'ges-ho',
+    client:       'GES-Ho',
+    industry:     'Public Sector & Educational Portals',
+    title:        'GES-Ho — Municipal Directorate Portal',
+    description:  'A centralized web portal and administrative directory built for the Ghana Education Service Municipal Directorate in Ho. Enables educators, administrators, and the public to access regional school registries, official circulars, departmental rosters, and educational resources in real time.',
+    tags:         ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
+    image:        '/images/client/ges-ho.webp',
+    alt:          'Ghana Education Service Ho Municipal Directorate platform interface',
+    liveUrl:      'https://ges-ho-dir.vercel.app/',
+    confidential: false,
+  },
 ]
