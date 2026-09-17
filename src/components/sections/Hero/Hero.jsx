@@ -61,7 +61,7 @@ const Hero = () => (
 
         <div className={styles.cta}>
           <Button
-            href="/cv/updatedcv.pdf"
+            href="/cv/Collins_Agbo_CV.pdf"
             download="Collins_Agbo_CV.pdf"
             size="lg"
             onClick={() =>
