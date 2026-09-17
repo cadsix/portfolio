@@ -17,11 +17,11 @@ const AboutContent = () => (
     </div>
 
     <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
-      I&apos;m a software developer based in Accra, Ghana. I focus on building fast, reliable, and user-centric web applications. With a strong foundation in modern frontend architecture and clean design, I love turning complex problems into clean, efficient code.
+      I&apos;m a software engineer based in Ho, Ghana with hands-on experience building production web applications end-to-end — from responsive frontend interfaces to backend integrations and deployment.
     </p>
 
     <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
-      When I&apos;m not coding, you can usually find me exploring new web tools, diving into UI design systems, or following tech trends.
+      I focus on React, Next.js, Node.js, Supabase, and Firebase, with a proven ability to turn complex requirements into clean, scalable solutions — complemented by a working knowledge of UI/UX and graphic design.
     </p>
 
   </ScrollReveal>

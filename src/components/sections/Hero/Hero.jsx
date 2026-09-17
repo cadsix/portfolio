@@ -53,7 +53,7 @@ const Hero = () => (
 
         <div className={styles.location}>
           <HiLocationMarker className={styles.locationPin} aria-hidden="true" />
-          Accra, Ghana
+          Ho, Ghana
         </div>
 
         <SocialLinks />

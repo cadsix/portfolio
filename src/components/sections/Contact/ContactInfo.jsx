@@ -10,7 +10,7 @@ const INFO_ITEMS = [
   {
     icon:    <HiLocationMarker size={22} />,
     heading: 'Location',
-    content: 'Accra, Ghana',
+    content: 'Ho, Ghana',
     href:    null,
   },
   {
